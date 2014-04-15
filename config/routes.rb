@@ -1,5 +1,10 @@
 FoodJournal::Application.routes.draw do
+  get "welcome/hello"
   resources :foods
+
+  get '/hello', to: 'welcome#hello'
+  get '/hello/:name', to: 'welcome#hello'
+  root to: 'welcome#hello'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
