@@ -1,7 +1,6 @@
 <h1><font color="blue">Hello <%= @name %>!</font><h1>
 </br>
 <h1><font color="<%= set_color %>">Welcome to Food Journal!</font></h1>
-<%= link_to 'Food Journal', foods_path %>
 <%= link_to 'Change Color', hello_path(name: @name, font_color: "green") %>
 </br>
 <%= @time %>

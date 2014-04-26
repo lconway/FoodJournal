@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
+  before_filter :set_time
 
   # GET /foods
   # GET /foods.json
@@ -63,6 +64,11 @@ class FoodsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    def set_time
+      @time = Time.now
+    end
+
     def set_food
       @food = Food.find(params[:id])
     end
