@@ -1,5 +1,8 @@
 FoodJournal::Application.routes.draw do
+
   get "welcome/hello"
+  resources :users
+  resources :meals
   resources :foods
 
   get '/hello', to: 'welcome#hello'
